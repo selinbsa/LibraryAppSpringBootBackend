@@ -11,7 +11,7 @@ services:
       SPRING_DATASOURCE_PASSWORD: root
 
   mysql:
-    image: arm64v8/mysql:8
+    image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: library-app
