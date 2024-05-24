@@ -19,5 +19,5 @@ services:
       MYSQL_DATABASE: library-app
     volumes:
       - mysql-data:/var/lib/mysql
-volumes:
-  mysql-data: my-data
+  volumes:
+    mysql-data: ./data:/var/lib/mysql
