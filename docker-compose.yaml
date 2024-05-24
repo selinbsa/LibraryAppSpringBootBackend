@@ -2,7 +2,7 @@ services:
   springboot-app:
     build: .
     ports:
-      - '${PORT}:8080'
+      - "${PORT}:5000"
     depends_on:
       - mysql
     environment:
