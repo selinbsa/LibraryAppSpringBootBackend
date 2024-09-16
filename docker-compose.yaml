@@ -1,18 +1,22 @@
+version: "3.8"
 services:
   springboot-app:
     build: .
     ports:
       - "8080:8080"
     depends_on:
-      - mysql
+      - postgres
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/library-app
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root
+      DBURL: postgres:5432
+      DBNAME: library-app
+      DBUSERNAME: postgres
+      DBPASSWORD: postgres
 
-  mysql:
-    image: mysql
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
     environment:
-      MYSQL_ROOT_USERNAME: root
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: library-app
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: library-app
