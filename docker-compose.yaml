@@ -4,19 +4,19 @@ services:
     build: .
     ports:
       - "8080:8080"
-    depends_on:
-      - postgres
+    #depends_on:
+     # - postgres
     environment:
-      DBURL: postgres:5432
-      DBNAME: library-app
-      DBUSERNAME: postgres
-      DBPASSWORD: postgres
+      DBURL: dpg-d3v18iv5r7bs73fsk220-a.oregon-postgres.render.com/libraryappdb_l443
+      DBNAME: Libraryapp
+      DBUSERNAME: libraryappdb_l443_user
+      DBPASSWORD: OHcVba3BvQItvu4hEUroiHeJrNflWuYj
 
-  postgres:
-    image: postgres
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: library-app
+  # postgres:
+  #  image: postgres
+   # ports:
+    #  - 5432:5432
+    #environment:
+     # POSTGRES_USER: postgres
+      #POSTGRES_PASSWORD: 20012000
+     # POSTGRES_DB: Libraryapp
